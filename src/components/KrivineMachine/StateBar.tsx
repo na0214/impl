@@ -1,21 +1,21 @@
 import React from 'react'
 import { Typography, Paper } from '@material-ui/core'
 
-const paperStyle = { height: "10%", textAlign: "center" }
+const paperStyle = { height: "10%", margin: "5px" }
 
 export const StateBar: React.FC = () => (
   <>
     <Paper style={paperStyle}>
-      <Typography variant="h5">λx.x</Typography>
+      <Typography variant="h5" align="center">λx.x</Typography>
     </Paper>
     <Paper style={paperStyle}>
-      <Typography variant="h5">最近の更新</Typography>
+      <Typography variant="h5" align="center">λx.x</Typography>
     </Paper>
     <Paper style={paperStyle}>
-      <Typography variant="h5">最近の更新</Typography>
+      <Typography variant="h5" align="center">λx.x</Typography>
     </Paper>
     <Paper style={paperStyle}>
-      <Typography variant="h5">最近の更新</Typography>
+      <Typography variant="h5" align="center">λx.x</Typography>
     </Paper>
   </>
 )
