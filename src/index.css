@@ -20,6 +20,7 @@ div#root {
   display: grid;
   grid-template-rows: 9fr 1fr;
   grid-template-columns: 1fr;
+  height: 100%
 }
 
 html, body,#app,div{ 

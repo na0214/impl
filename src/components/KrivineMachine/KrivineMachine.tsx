@@ -14,7 +14,7 @@ export const KrivineMachine: React.FC = () => {
       <Grid item xs={6}><TextEdit /></Grid>
       <Grid item xs={6}>
         <div style={{ display: "grid", gridTemplateRows: "9fr 1fr", gridTemplateColumns: "1fr" }}>
-          <h1>Test</h1>
+          <MachineState />
           <Grid container>
             <Grid item xs={3}><Button style={buttonStyle} color="secondary" fullWidth variant="contained"> {"<<"} </Button></Grid>
             <Grid item xs={3}><Button style={buttonStyle} color="secondary" fullWidth variant="contained"> {"<"} </Button></Grid>
