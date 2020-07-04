@@ -2,18 +2,29 @@ import React from 'react'
 import { Grid, Button } from '@material-ui/core'
 import { TextEdit } from '../TextEdit'
 import { MachineState } from './MachineState'
+import { TokenAnnotator } from 'react-text-annotate'
 
 const buttonStyle = {
   height: "100%",
-  fontSize: "30px"
+  fontSize: "30px",
 }
 
 export const KrivineMachine: React.FC = () => {
   return (
     <Grid container>
-      <Grid item xs={6}><TextEdit /></Grid>
       <Grid item xs={6}>
-        <div style={{ display: "grid", gridTemplateRows: "9fr 1fr", gridTemplateColumns: "1fr" }}>
+        <div style={{ display: "grid", gridTemplateRows: "1fr 1fr", gridTemplateColumns: "1fr" }}><TextEdit />
+          <div style={{ backgroundColor: "#e0e0e0" }}>
+            <TokenAnnotator
+              onChange={() => ""}
+              tokens={['(','λx','.','x',')','(','λx','.','x',')']}
+              value={[{ start: 6, end: 9, tag: 'Evaluating', color: '#ffd700' }]}
+            />
+          </div>
+        </div>
+      </Grid >
+      <Grid item xs={6}>
+        <div style={{ display: "grid", gridTemplateRows: "9fr 1fr", gridTemplateColumns: "1fr", backgroundColor: "#212121" }}>
           <MachineState />
           <Grid container>
             <Grid item xs={3}><Button style={buttonStyle} color="secondary" fullWidth variant="contained"> {"<<"} </Button></Grid>
@@ -23,5 +34,5 @@ export const KrivineMachine: React.FC = () => {
           </Grid>
         </div>
       </Grid>
-    </Grid>)
+    </Grid >)
 }

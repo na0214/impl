@@ -16,6 +16,12 @@ div#root {
   height:93%
 }
 
+.box-read{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #text-edit-container {
   display: grid;
   grid-template-rows: 9fr 1fr;
