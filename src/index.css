@@ -16,6 +16,12 @@ div#root {
   height:93%
 }
 
-html, body,#app, div { 
+#text-edit-container {
+  display: grid;
+  grid-template-rows: 9fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+html, body,#app,div{ 
   height: 100% 
 } 

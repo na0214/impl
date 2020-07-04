@@ -1,8 +1,12 @@
 import React from 'react'
-import { TextField, Typography, Paper } from '@material-ui/core'
+import { TextField, Typography, Paper, Grid } from '@material-ui/core'
 
 export const TextEdit: React.FC = () => (
-  <Paper>
-    <Typography variant="h5">Test1</Typography>
-  </Paper>
+  <TextField
+    id="outlined-multiline-static"
+    label="Please input code here."
+    multiline
+    fullWidth
+    variant="filled"
+  />
 )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Header } from './components/Header'
+
 import { KrivineMachine } from './components/KrivineMachine/KrivineMachine'
 
 enum Mode {
