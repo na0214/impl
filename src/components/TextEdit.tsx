@@ -1,12 +1,22 @@
-import React from 'react'
-import { TextField, Typography, Paper, Grid } from '@material-ui/core'
+import React, { Dispatch, SetStateAction } from 'react'
+import { TextField } from '@material-ui/core'
 
-export const TextEdit: React.FC = () => (
-  <TextField
-    id="outlined-multiline-static"
-    label="Please input code here."
-    multiline
-    fullWidth
-    variant="filled"
-  />
-)
+type TextEditProps = {
+  textValue: string,
+  setTextValue: Dispatch<SetStateAction<string>>
+}
+
+export const TextEdit: React.FC<TextEditProps> = (props) => {
+
+  return (
+    <TextField
+      id="outlined-multiline-static"
+      label="Please input code here."
+      multiline
+      fullWidth
+      value={props.textValue}
+      onChange={(e) => props.setTextValue(e.target.value)}
+      variant="filled"
+    />
+  )
+}

@@ -1,0 +1,1 @@
+export const anyChar = (str: string) => str.charAt(0)

@@ -1,12 +1,18 @@
 import React from 'react'
 import { TokenAnnotator } from 'react-text-annotate'
 
-export const EvaluationHighlight: React.FC = () => (
+type EvaluationHighlightProps = {
+  tokenList: string[],
+  highlightStart: number,
+  highlightEnd: number
+}
+
+export const EvaluationHighlight: React.FC<EvaluationHighlightProps> = (props) => (
   <div style={{ backgroundColor: "#e0e0e0" }}>
     <TokenAnnotator
       onChange={() => ""}
-      tokens={['(', 'λx', '.', 'x', ')', '(', 'λx', '.', 'x', ')']}
-      value={[{ start: 6, end: 9, tag: 'Evaluating', color: '#ffd700' }]}
+      tokens={props.tokenList}
+      value={[{ start: props.highlightStart, end: props.highlightEnd, tag: 'Evaluating', color: '#ffd700' }]}
     />
   </div>
 )

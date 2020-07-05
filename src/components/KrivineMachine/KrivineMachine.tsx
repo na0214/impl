@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Button } from '@material-ui/core'
 import { TextEdit } from '../TextEdit'
 import { MachineState } from './MachineState'
@@ -10,12 +10,14 @@ const buttonStyle = {
 }
 
 export const KrivineMachine: React.FC = () => {
+  const [textValue, setTextValue] = useState("")
+
   return (
     <Grid container>
       <Grid item xs={6}>
         <div style={{ display: "grid", gridTemplateRows: "1fr 1fr", gridTemplateColumns: "1fr" }}>
-          <TextEdit />
-          <EvaluationHighlight />
+          <TextEdit textValue={textValue} setTextValue={setTextValue} />
+          <EvaluationHighlight tokenList={["(", "λ", "x", ".", "x", ")", "(", "λ", "x", ".", "x", ")"]} highlightStart={6} highlightEnd={12} />
         </div>
       </Grid >
       <Grid item xs={6}>
