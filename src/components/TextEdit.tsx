@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react'
 import { TextField } from '@material-ui/core'
+import { parse } from './KrivineMachine/Parser'
 
 type TextEditProps = {
   textValue: string,
